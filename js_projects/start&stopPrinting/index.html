@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+    <script>
+        // let i= 1;
+        let startIt
+        // let started= true
+        // if(started)
+            document.getElementById('start').addEventListener('click',function(){
+                    // started= false;
+                    startIt = setInterval(function(){
+                    // console.log('Hi Piyush ' + i + ' time')
+                    // i++
+                    let body = document.querySelector('body')
+                    const p = document.createElement('p')
+                    p.innerHTML = 'Hi Piyush'
+                    body.appendChild(p)
+                    },1000)
+                
+            })  
+        
+        
+        document.getElementById('stop').addEventListener('click',function(){
+            // started= true
+            clearInterval(startIt)
+            startIt= null
+            
+        })
+    </script>
+</html>
